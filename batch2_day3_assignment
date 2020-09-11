@@ -1,0 +1,197 @@
+ANS1:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="english">Hii</p>
+    <p class="english">Hello</p>
+    <p id="spanish">Olah</p>
+    <p>something in spanish</p>
+    <p>bon jour</p>
+
+    <div id="data">Hello JS Developers</div>
+
+    <button onclick="doSomething()">Click</button>
+
+    <br />
+    <img
+      src="https://image.cnbcfm.com/api/v1/image/104819285-thor.jpg?v=1529476684"
+      width="200px"
+      id="image"
+    />
+
+    <button onclick="changeImage()">Change Image</button>
+
+    <br /><br />
+    <input type="text" class="name" placeholder="Enter Name" />
+
+    <button onclick="printValue()">get the value</button>
+
+    <script src="scripts/domman.js"></script>
+  </body>
+</html>
+
+ANS2: 
+// function declaration
+
+// function add(num1, num2) {
+//   let result = num1 + num2;
+//   return result;
+// }
+
+// let res = add(30);
+// console.log(res);
+
+// function expression
+// const add = function (num1, num2) {
+//   let result = num1 + num2;
+//   console.log(result);
+// };
+
+// normal function
+
+function doSomething(name) {
+  console.log("hello " + name);
+}
+
+// arrow function
+doSomething = (name) => {
+  console.log("hello " + name);
+};
+
+doSomething("saurabh");
+
+
+
+ANS3 : 
+
+// collection of properties (features that it has)
+// & methods (work that it does)
+
+// properties - variables
+// methods - functions
+
+// let avenger = {
+//   name: "Thor",
+//   age: 1500,
+//   weapons: ["Mjolnir", "Stormbreaker", "Thunder"],
+//   address: {
+//     planet: "Asgard",
+//     home: "Apratment",
+//   },
+
+//   printWeapon: function () {
+//     this.weapons.forEach(function (weapon) {
+//       console.log(weapon);
+//     });
+
+//     console.log(this.address);
+//   },
+// };
+
+// avenger.printWeapon();
+
+// console.log(avenger.address.planet);
+
+// let avengers = [
+//   {
+//     name: "Thor",
+//     age: 1500,
+//   },
+//   {
+//     name: "Captain America",
+//     age: 100,
+//   },
+//   {
+//     name: "Ironman",
+//     age: 43,
+//   },
+// ];
+
+// for (let i = 0; i < avengers.length; i++) {
+//   console.log(avengers[i].name);
+// }
+
+// avengers.forEach(function (avenger) {
+//   console.log(avenger.name);
+// });
+
+demo = {
+  name: "Laptop",
+  printName: () => {
+    console.log(this);
+  },
+};
+
+demo.printName();
+
+ANS 4  :
+alert("Hello");
+
+// let name = prompt("enter name");
+// console.log(name);
+
+// let answer = confirm("do u want to go to google");
+// if (answer == false) {
+//   console.log("okay stay here");
+// } else {
+//   location = "https://www.google.co.in";
+// }
+
+// fetching elements
+// manipulate the text
+// manipulate the html
+// work with attributes
+// work with inputs
+//manipulate css
+
+// show password
+//popups
+
+// by tagname
+
+// const paragraphs = document.getElementsByTagName("p");
+// console.log(paragraphs[1]);
+
+// by class name
+
+// const para = document.getElementsByClassName("english");
+// console.log(para[0]);
+
+// by id
+
+// const para = document.getElementById("spanish");
+// console.log(para);
+
+// by quering
+
+// const para = document.querySelector("h1");
+// console.log(para);
+
+// const para = document.querySelectorAll("#spanish");
+// console.log(para);
+
+// working with text
+
+function doSomething() {
+  const para = document.getElementById("data");
+  para.innerHTML = "<h1>I am js developer</h1>";
+}
+
+function changeImage() {
+  const ele = document.getElementById("image");
+  console.log(ele.id);
+  const newUrl =
+    "https://s3.r29static.com/bin/entry/ce2/x,80/2169674/image.jpg";
+
+  ele.src = newUrl;
+}
+
+function printValue() {
+  const eles = document.getElementsByClassName("name");
+  console.log(eles[0].value);
+
